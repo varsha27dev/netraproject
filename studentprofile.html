@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+</head>
+    <main>
+        <div>
+            <h1>Student profile page</h1>
+        </div>
+        <section>
+            <h2>About Me</h2>
+            <img src="https://randomuser.me/api/portraits/women/85.jpg" alt="image cannot be load" width="80" height="80">
+            <p>Vaguldas Varsha | CSE </p>
+        </section>
+        <section>
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>Python</li>
+                <li>C</li>
+                <li>My SQl</li>
+            </ul>
+        </section>
+        <section>
+            <h2>My Project</h2>
+            <ol>
+                <li>Registration Page</li>
+                <li>Library Management Page</li>
+                <li>Student Profile</li>
+            </ol>
+        </section>
+        <section>
+            <h2>course Registration</h2>
+            <form action = "" method="get">
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="Enter Full Name">
+
+                <label for="email">Email</label>
+                <input type="email" name="Email" id="" placeholder="Enter Email">
+
+                <label for="course" id="course">course</label>
+                <select name = "course" id="course">
+                    <option value = "python">python</option>
+                    <option value = "Java">Java</option>
+                    <option value = "HTML">HTML</option>
+                </select>
+                <p>Learning Mode
+                    <label for="online"><input type="radio" name="mode" id="" value = "online">online</label>
+                    <label for="offline"><input type="radio" name="mode" id="" value="offline">offline</label>
+                </p>
+                <label for="comment">comments</label>
+                <textarea name="comment" id="" cols="30" rows="10"></textarea>
+                <p>
+                    <label for="agree"><input type="checkbox" name="agree" id="">I Agree the terms and conditions</label>
+                </p>
+                <button type="submit">Register</button>
+                <button type="Reset">Reset</button>
+
+                
+            </form>
+        </section>
+
+    </main>
+</body>
+</html>
