@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Explore and register for university events.">
+    <title>Student Activity Management Portal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f9;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            background: #173b70;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #244e87;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 12px;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section, aside {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        article {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]),
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        fieldset {
+            margin-top: 15px;
+            border: 1px solid #aaa;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        .choice label {
+            display: inline-block;
+            font-weight: normal;
+            margin: 5px;
+        }
+
+        button {
+            background: #173b70;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #285a9e;
+        }
+
+        :focus-visible {
+            outline: 3px solid #e07800;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>University Student Activity Portal</h1>
+        <p>Explore, Participate and Grow</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main id="home">
+        <section aria-labelledby="welcome-heading">
+            <h2 id="welcome-heading">Welcome Students</h2>
+            <p>
+                Discover university activities, explore
+                upcoming events and register online.
+            </p>
+        </section>
+
+        <section id="events" aria-labelledby="events-heading">
+            <h2 id="events-heading">Upcoming Events</h2>
+
+            <article>
+                <h3>Technical Workshop</h3>
+                <p>Learn programming and new technologies.</p>
+            </article>
+
+            <article>
+                <h3>Cultural Fest</h3>
+                <p>Participate in music, dance and arts.</p>
+            </article>
+
+            <article>
+                <h3>Sports Competition</h3>
+                <p>Join university sports activities.</p>
+            </article>
+        </section>
+
+        <aside aria-labelledby="notice-heading">
+            <h2 id="notice-heading">Important Notice</h2>
+            <p>
+                Students should register before the
+                event registration deadline.
+            </p>
+        </aside>
+
+        <section id="register"
+                 aria-labelledby="register-heading">
+            <h2 id="register-heading">Event Registration</h2>
+
+            <form action="#" method="post">
+                <label for="name">Full Name</label>
+                <input type="text" id="name"
+                       name="name" autocomplete="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                       name="email" autocomplete="email" required>
+
+                <label for="studentid">Student ID</label>
+                <input type="text" id="studentid"
+                       name="studentid" required>
+
+                <label for="department">Department</label>
+                <select id="department"
+                        name="department" required>
+                    <option value="">Select Department</option>
+                    <option value="cse">CSE</option>
+                    <option value="ece">ECE</option>
+                    <option value="eee">EEE</option>
+                    <option value="mech">Mechanical</option>
+                </select>
+
+                <fieldset>
+                    <legend>Year of Study</legend>
+                    <div class="choice">
+                        <label><input type="radio" name="year"
+                               value="1" required> 1st Year</label>
+                        <label><input type="radio" name="year"
+                               value="2"> 2nd Year</label>
+                        <label><input type="radio" name="year"
+                               value="3"> 3rd Year</label>
+                        <label><input type="radio" name="year"
+                               value="4"> 4th Year</label>
+                    </div>
+                </fieldset>
+
+                <label for="event">Choose Event</label>
+                <select id="event" name="event" required>
+                    <option value="">Select Event</option>
+                    <option value="workshop">Technical Workshop</option>
+                    <option value="cultural">Cultural Fest</option>
+                    <option value="sports">Sports Competition</option>
+                </select>
+
+                <fieldset>
+                    <legend>Areas of Interest</legend>
+                    <div class="choice">
+                        <label><input type="checkbox"
+                               name="interest" value="coding">
+                               Coding</label>
+                        <label><input type="checkbox"
+                               name="interest" value="arts">
+                               Arts</label>
+                        <label><input type="checkbox"
+                               name="interest" value="sports">
+                               Sports</label>
+                    </div>
+                </fieldset>
+
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" name="comments"
+                          rows="4"></textarea>
+
+                <button type="submit">Register Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>Contact: activities@university.edu</p>
+        <p>&copy; 2026 University Activity Portal</p>
+    </footer>
+</body>
+</html>

@@ -1,8 +1,0 @@
-#include <stdio.h>
-#define x printf("hello")
-int main()
-{
-    int i = x;
-reurn0;
-}
-} 

@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Hospital services and patient appointments">
+    <title>City Hospital | Appointments</title>
+</head>
+<body>
+
+    <header>
+        <h1>City Hospital</h1>
+        <p>Your Health, Our Priority</p>
+
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#appointment">Appointment</a>
+        </nav>
+    </header>
+
+    <main id="home">
+
+        <section aria-labelledby="welcome-heading">
+            <h2 id="welcome-heading">
+                Welcome to City Hospital
+            </h2>
+            <p>We provide quality healthcare services.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>General Medicine</li>
+                <li>Cardiology</li>
+                <li>Orthopedics</li>
+            </ul>
+        </section>
+
+        <section id="doctors">
+            <h2>Our Doctors</h2>
+
+            <article>
+                <h3>Dr. Ravi Kumar</h3>
+                <p>Specialist in Cardiology</p>
+            </article>
+
+            <article>
+                <h3>Dr. Priya Sharma</h3>
+                <p>Specialist in Orthopedics</p>
+            </article>
+        </section>
+
+        <section id="appointment">
+            <h2>Book an Appointment</h2>
+
+            <form id="appointmentForm">
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name"
+                       name="name" autocomplete="name"
+                       required>
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email"
+                       name="email" autocomplete="email"
+                       required>
+                <br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone"
+                       name="phone" autocomplete="tel"
+                       pattern="[0-9]{10}"
+                       title="Enter a 10-digit phone number"
+                       required>
+                <br><br>
+
+                <label for="department">
+                    Select Department:
+                </label>
+                <select id="department"
+                        name="department" required>
+                    <option value="">
+                        Choose Department
+                    </option>
+                    <option value="cardiology">
+                        Cardiology
+                    </option>
+                    <option value="orthopedics">
+                        Orthopedics
+                    </option>
+                    <option value="general">
+                        General Medicine
+                    </option>
+                </select>
+                <br><br>
+
+                <label for="date">
+                    Appointment Date:
+                </label>
+                <input type="date" id="date"
+                       name="date" required>
+                <br><br>
+
+                <fieldset>
+                    <legend>Preferred Time</legend>
+
+                    <input type="radio" id="morning"
+                           name="time" value="morning"
+                           required>
+                    <label for="morning">Morning</label>
+
+                    <input type="radio" id="evening"
+                           name="time" value="evening">
+                    <label for="evening">Evening</label>
+                </fieldset>
+
+                <label for="message">
+                    Additional Information:
+                </label>
+                <textarea id="message"
+                          name="message"></textarea>
+                <br><br>
+
+                <input type="checkbox" id="consent"
+                       name="consent" required>
+                <label for="consent">
+                    I agree to the privacy policy.
+                </label>
+                <br><br>
+
+                <button type="submit">
+                    Book Appointment
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 City Hospital.
+           All rights reserved.</p>
+    </footer>
+
+    <script>
+        const dateInput = document.getElementById("date");
+        const today = new Date();
+        const localDate = new Date(
+            today.getTime() -
+            today.getTimezoneOffset() * 60000
+        ).toISOString().split("T")[0];
+
+        dateInput.min = localDate;
+
+        document.getElementById("appointmentForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                if (this.reportValidity()) {
+                    alert("Form validated successfully. " +
+                          "Appointment not yet submitted.");
+                }
+            });
+    </script>
+
+</body>
+</html>
