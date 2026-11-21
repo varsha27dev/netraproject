@@ -1,0 +1,13 @@
+h2{
+    text-align: centre;
+    color:plum;
+    font-size : 24px;
+    font-family:Arial, Helvetica, sans-serif;
+    border : 3px solid pink;
+    border-radius: 10px;
+}
+p{
+    text-align: center;
+    color:black;
+    font-size:10px;
+}
